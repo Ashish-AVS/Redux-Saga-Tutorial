@@ -13,7 +13,7 @@ function App() {
   }
   return (
     <div className="App">
-      <button onClick={() => {dispatch(addToCart(dummyItem))}}>Add to cart!!</button>
+      <button onClick={() => dispatch(addToCart(dummyItem))}>Add to cart!!</button>
     </div>
   );
 }
