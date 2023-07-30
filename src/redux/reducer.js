@@ -8,12 +8,14 @@ export const cartData = (data=[], action) => {
             console.warn("addToCart action called", action)
             return [action.data, ...data]
         case REDUCE_FROM_CART:
-            console.warn("reduce from cart reducer called", action)
-            data.length = data.length ? data.length - 1 : [] 
-            return [...data]
+            console.warn("REDUCE_FROM_CART condition ", action);
+            let tempData = [...data]
+            tempData.length= tempData.length? tempData.length-1:[]
+            return [...tempData]
         case CLEAR_CART:
             console.warn("clear cart called", action)
-            return []
+            data = []
+            return [...data]
         default:
             console.warn("No action matched!");
             return data
