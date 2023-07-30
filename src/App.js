@@ -1,19 +1,12 @@
 import './App.css';
-
-import {useDispatch} from 'react-redux'
-import {addToCart} from './redux/action'
+import Header from './components/Header';
+import Main from './components/Main';
 
 function App() {
-
-  const dispatch = useDispatch();
-  const dummyItem = {
-    name: "Asus Tuf",
-    model: "FX 505",
-    color: "Black"
-  }
   return (
     <div className="App">
-      <button onClick={() => dispatch(addToCart(dummyItem))}>Add to cart!!</button>
+      <Header />
+      <Main />
     </div>
   );
 }
